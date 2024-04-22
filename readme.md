@@ -7,3 +7,4 @@ This project is part of Django tutorial, which is led by Dennis Ivy: https://git
 - Created models for users
 - connected Profiles database with Projects
 - added profiles websites
+- added signals to Profiles (on_save and on_delete)
