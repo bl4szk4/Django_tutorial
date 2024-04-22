@@ -5,3 +5,4 @@ This project is part of Django tutorial, which is led by Dennis Ivy: https://git
 22.04.2024 - Sharing project on GitHub
 - Added new app: Users
 - Created models for users
+- connected Profiles database with Projects
