@@ -6,3 +6,4 @@ This project is part of Django tutorial, which is led by Dennis Ivy: https://git
 - Added new app: Users
 - Created models for users
 - connected Profiles database with Projects
+- added profiles websites
