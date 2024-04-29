@@ -1,7 +1,11 @@
-from django.shortcuts import render
+from django.core.exceptions import ObjectDoesNotExist
+from django.shortcuts import render, redirect
+from django.contrib.auth import login, authenticate, logout
 from .models import Profile
-# Create your views here.
-
+from django.contrib.auth.models import User
+from django.contrib.auth.decorators import login_required
+from django.contrib import messages
+from .forms import CustomUserCreationForm
 
 def profiles(request):
     profiles = Profile.objects.all()
@@ -15,3 +19,56 @@ def userProfile(request, pk):
     other_skills = profile.skill_set.filter(description='')
     context = {'profile': profile, 'skill_with_description': skill_with_description, 'other_skills': other_skills}
     return render(request, r'users\user-profile.html', context)
+
+
+def loginUser(request):
+    page = 'login'
+    if request.user.is_authenticated:
+        return redirect('profiles')
+    if request.method == 'POST':
+        username = request.POST['username']
+        password = request.POST['password']
+
+        try:
+            user = User.objects.get(username=username)
+        except ObjectDoesNotExist:
+            messages.error(request, 'Username does not exist')
+        user = authenticate(request, username=username, password=password)
+
+        if user is not None:
+            login(request, user)
+            messages.success(request, 'You are now logged in')
+            return redirect('profiles')
+        else:
+            messages.error(request, 'Username or Password is incorrect')
+
+    return render(request, 'users/login_register.html')
+
+
+def logoutUser(request):
+    logout(request)
+    messages.success(request, 'You are now logged out')
+    return redirect('login')
+
+
+def registerUser(request):
+    if request.user.is_authenticated:
+        return redirect('profiles')
+    form = CustomUserCreationForm()
+
+    if request.method == 'POST':
+        form = CustomUserCreationForm(request.POST)
+        if form.is_valid():
+            user = form.save(commit=False)
+            user.username = user.username.lower()
+            user.save()
+            messages.success(request, 'You are now registered')
+            login(request, user)
+            return redirect('profiles')
+        else:
+            messages.error(request, 'Please correct the error below.')
+
+
+    page = 'register'
+    context = {'page': page, 'form': form}
+    return render(request, 'users/login_register.html', context=context)
