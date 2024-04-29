@@ -6,6 +6,7 @@ This project is part of Django tutorial, which is led by Dennis Ivy: https://git
 - Users can be logged in and registered
 - Messages prompts with info about login
 - Restrictions for projects creation - just for logged in users
+- Added user profile page
 
 22.04.2024 - Sharing project on GitHub
 - Added new app: Users
