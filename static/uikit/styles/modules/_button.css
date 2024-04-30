@@ -52,7 +52,10 @@
   background-color: var(--color-sub);
   color: var(--color-white);
 }
-
+.btn--sub2{
+  background-color: var(--color-error);
+  color: var(--color-white);
+}
 .btn.btn--sub--outline {
   background-color: transparent;
   color: var(--color-sub);
