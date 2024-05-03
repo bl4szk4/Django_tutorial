@@ -1,6 +1,9 @@
 # Django tutorial project
 This project is part of Django tutorial, which is led by Dennis Ivy: https://github.com/divanov11
 
+03.05.2024 - Searching
+- added possibility to search projects and developers by name, skills, description and tags
+
 30.04.2024 - Skills
 - Added possibility to add, edit or delete skills
 

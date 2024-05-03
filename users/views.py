@@ -6,10 +6,14 @@ from django.contrib.auth.models import User
 from django.contrib.auth.decorators import login_required
 from django.contrib import messages
 from .forms import CustomUserCreationForm, ProfileForm, SkillForm
+from .utils import search_profiles
+
 
 def profiles(request):
-    profiles = Profile.objects.all()
-    return render(request, r'users\profiles.html', {'profiles': profiles})
+    print(type(request))
+    profiles, search_query = search_profiles(request)
+    return render(request, r'users\profiles.html',
+                  {'profiles': profiles, 'search_query': search_query})
 
 
 def userProfile(request, pk):
