@@ -6,6 +6,7 @@ This project is part of Django tutorial, which is led by Dennis Ivy: https://git
 
 30.04.2024 - Skills
 - Added possibility to add, edit or delete skills
+- Added pagination for projects and profiles
 
 29.04.2024 - Login, Logout and register
 - Added login and registration panels
