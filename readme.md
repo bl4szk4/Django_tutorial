@@ -5,6 +5,7 @@ This project is part of Django tutorial, which is led by Dennis Ivy: https://git
 - Users can comment projects
 - Ordering projects by their vote ratio
 - Added conditions for comment section
+- Sending messages for users
 
 03.05.2024 - Searching
 - added possibility to search projects and developers by name, skills, description and tags
