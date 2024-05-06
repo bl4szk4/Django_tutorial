@@ -3,6 +3,7 @@ This project is part of Django tutorial, which is led by Dennis Ivy: https://git
 
 06.05.2024 - Comment and reviews section
 - Users can comment projects
+- Ordering projects by their vote ratio
 
 03.05.2024 - Searching
 - added possibility to search projects and developers by name, skills, description and tags
