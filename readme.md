@@ -1,6 +1,10 @@
 # Django tutorial project
 This project is part of Django tutorial, which is led by Dennis Ivy: https://github.com/divanov11
 
+07.05.2024 - Email
+- Sending welcome email after registration
+- Possibility of restoring forgotten password
+
 06.05.2024 - Comment and reviews section
 - Users can comment projects
 - Ordering projects by their vote ratio
