@@ -3,6 +3,7 @@ This project is part of Django tutorial, which is led by Dennis Ivy: https://git
 
 12.05.2024 - GET for projects
 - implemented GET method for projects and a single project using Django Rest Framework
+- added relations for models in API
 
 07.05.2024 - API
 - Starting API
