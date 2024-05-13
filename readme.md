@@ -5,6 +5,7 @@ This project is part of Django tutorial, which is led by Dennis Ivy: https://git
 - implemented GET method for projects and a single project using Django Rest Framework
 - added relations for models in API
 - added JWS authentication for API
+- ability to vote for projects with API (POST)
 
 07.05.2024 - API
 - Starting API
