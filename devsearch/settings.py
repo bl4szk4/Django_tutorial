@@ -44,10 +44,12 @@ INSTALLED_APPS = [
     "projects.apps.ProjectsConfig",
     "users.apps.UsersConfig",
     'rest_framework',
+    'corsheaders',
 
 ]
 
 MIDDLEWARE = [
+    'corsheaders.middleware.CorsMiddleware',
     "django.middleware.security.SecurityMiddleware",
     "django.contrib.sessions.middleware.SessionMiddleware",
     "django.middleware.common.CommonMiddleware",
@@ -198,3 +200,5 @@ EMAIL_PORT = 587
 EMAIL_USE_TLS = True
 EMAIL_HOST_USER = "devsearch.jl@gmail.com"
 EMAIL_HOST_PASSWORD = "devsearch123!"
+
+CORS_ALLOW_ALL_ORIGINS = True

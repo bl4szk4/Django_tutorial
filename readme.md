@@ -1,6 +1,9 @@
 # Django tutorial project
 This project is part of Django tutorial, which is led by Dennis Ivy: https://github.com/divanov11
 
+13.05.2024 - Getting info from other apps
+- Allowed other apps (urls) to use API using  django-cors-headers
+
 12.05.2024 - GET for projects
 - implemented GET method for projects and a single project using Django Rest Framework
 - added relations for models in API
