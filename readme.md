@@ -1,6 +1,10 @@
 # Django tutorial project
 This project is part of Django tutorial, which is led by Dennis Ivy: https://github.com/divanov11
 
+17.05.2024 - Fixing bugs
+- Cleaned the code and fixed minor bugs
+- Added possibility of deleting tags when editing the project
+
 13.05.2024 - Getting info from other apps
 - Allowed other apps (urls) to use API using  django-cors-headers
 
